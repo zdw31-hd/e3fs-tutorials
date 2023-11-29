@@ -1,2 +1,4 @@
 tsdev/dist/index.js.map
 tsdev/dist/index.js
+tsdev/node_modules/
+tsdev/package-lock.json
