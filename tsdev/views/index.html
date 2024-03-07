@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Queue Webpage</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body { padding-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Queue Webpage</h1>
+      <br>
+      <h7>Es befindet sich <%= count %> von <%= totalCount %> in der Wartenschlange</h1>
+      <br>
+      <br>
+      <h7>Aktuellstes Element: <%= lastElement %></h1>
+        <br>
+        <br>
+          <form method="post" action="https://bookish-acorn-67jprpw4qx5356pr-3000.app.github.dev/queue/enqueue" >
+            <label for="fname">Element:</label><br>
+            <input type="text" id="fname" name="fname"/><br>
+            <div style="display:flex; flex-direction: row; justify-content: left; align-items: center; width:50px">
+            <input type="submit" value="Enqueue">
+          </form>
+          <br>
+          <form method="post" action="https://bookish-acorn-67jprpw4qx5356pr-3000.app.github.dev/queue/dequeue" >
+            <input type="submit" value="Dequeue">
+          </form>
+     </div>
+
+
+    </div>
+  </div>
+    
+</body>
+</html>

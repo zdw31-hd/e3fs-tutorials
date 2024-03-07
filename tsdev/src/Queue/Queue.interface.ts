@@ -4,7 +4,7 @@ export interface IQueue<T> {
     peek(): T | undefined;
     length(): number;
     setCapacity(capacity:Number): void;
-    getCapacity(): void;
+    getCapacity(): Number;
   }  
 
 export enum QueueErrorType {
