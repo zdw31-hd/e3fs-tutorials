@@ -1,0 +1,20 @@
+<%- include("partials/head", { title }) %>
+<%- include("partials/nav") %>
+<main class="container">
+  <h1>Register</h1>
+  <% if (error) { %>
+    <p class="error"><%= error %></p>
+  <% } %>
+  <form method="post" action="/register" class="form">
+    <label>
+      Email
+      <input type="email" name="email" required />
+    </label>
+    <label>
+      Password (min 8)
+      <input type="password" name="password" minlength="8" required />
+    </label>
+    <button type="submit">Create account</button>
+  </form>
+</main>
+<%- include("partials/footer") %>

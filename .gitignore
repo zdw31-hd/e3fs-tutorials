@@ -3,3 +3,4 @@ tsdev/coverage
 tsdev/node_modules
 
 tsdev/package-lock.json
+tsdev/.env

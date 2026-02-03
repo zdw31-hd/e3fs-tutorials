@@ -1,0 +1,35 @@
+<%- include("partials/head", { title }) %>
+<%- include("partials/nav") %>
+<main class="container">
+  <h1>User Admin</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Created</th>
+        <th>Change Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach((u) => { %>
+        <tr>
+          <td><%= u.email %></td>
+          <td><%= u.role %></td>
+          <td><%= new Date(u.createdAt).toLocaleString() %></td>
+          <td>
+            <form method="post" action="/admin/users/<%= u._id %>/role" class="inline">
+              <select name="role">
+                <% roles.forEach((r) => { %>
+                  <option value="<%= r %>" <%= u.role === r ? "selected" : "" %>><%= r %></option>
+                <% }) %>
+              </select>
+              <button type="submit">Save</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</main>
+<%- include("partials/footer") %>

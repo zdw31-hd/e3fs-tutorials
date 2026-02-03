@@ -1,0 +1,9 @@
+<%- include("partials/head", { title }) %>
+<%- include("partials/nav") %>
+<main class="container">
+  <h1>Profile</h1>
+  <p>You are logged in.</p>
+  <p>User ID: <%= auth.userId %></p>
+  <p>Role: <%= auth.role %></p>
+</main>
+<%- include("partials/footer") %>

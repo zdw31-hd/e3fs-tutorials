@@ -1,0 +1,18 @@
+<nav class="nav">
+  <a href="/">Home</a>
+  <% if (auth) { %>
+    <a href="/profile">Profile</a>
+    <% if (auth.role === "admin") { %>
+      <a href="/admin/users">Admin</a>
+    <% } %>
+    <% if (auth.role === "moderator" || auth.role === "admin") { %>
+      <a href="/moderator">Moderator</a>
+    <% } %>
+    <form method="post" action="/logout" class="inline">
+      <button type="submit">Logout</button>
+    </form>
+  <% } else { %>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+  <% } %>
+</nav>
